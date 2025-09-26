@@ -14,3 +14,16 @@ Ready? Press any key to continue:";
 
 Console.WriteLine($"{welcome}");
 Console.ReadKey(true);
+
+string secretCode = "knot";
+int attempts = 0;
+string guess;
+
+do
+{
+    Console.Clear();
+    Console.Write("Enter your guess: ");
+    guess = Console.ReadLine();
+
+}
+while (guess != secretCode);
