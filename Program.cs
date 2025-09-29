@@ -14,6 +14,7 @@ Ready? Press any key to continue:";
 
 Console.WriteLine($"{welcome}");
 Console.ReadKey(true);
+Console.Clear();
 
 string secretCode = "knot";
 int attempts = 0;
@@ -21,12 +22,38 @@ string guess;
 
 do
 {
-    Console.Clear();
+    //Console.Clear();
+    Console.WriteLine();
     Console.WriteLine($"Guess#: {attempts + 1}  Please guess a sequence of 4 lowercase letters with no repeats.");
     Console.Write("Enter your guess: ");
     guess = Console.ReadLine();
-
     attempts++;
+
+    int correctLetterAndPosition = 0;
+    int correctLetterWrongPosition = 0;
+
+    for (int i = 0; i < secretCode.Length; i++)
+    {
+        if (guess[i] == secretCode[i])
+        {
+            correctLetterAndPosition++;
+        }
+        else if (secretCode.Contains(guess[i]))
+        {
+            correctLetterWrongPosition++;
+        }
+        
+    }
+
+    if (guess == secretCode)
+    {
+        Console.Clear();
+        Console.WriteLine($"You guessed the secret code ({secretCode}) in {attempts} guesses!");
+    }
+    else 
+    {
+        Console.WriteLine($"Correct Letters in Correct Position: {correctLetterAndPosition}");
+        Console.WriteLine($"Correct Letters in Wrong Position: {correctLetterWrongPosition}");  
+    }
 }
 while (guess != secretCode);
-Console.WriteLine($"You guessed the secret code ({secretCode}) in {attempts} guesses!");
