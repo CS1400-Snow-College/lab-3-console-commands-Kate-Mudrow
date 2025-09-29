@@ -32,13 +32,13 @@ do
     int correctLetterAndPosition = 0;
     int correctLetterWrongPosition = 0;
 
-    for (int i = 0; i < secretCode.Length; i++)
+    for (int i = 0; i < secretCode.Length; i++) //correct letter at correct position
     {
         if (guess[i] == secretCode[i])
         {
             correctLetterAndPosition++;
         }
-        else if (secretCode.Contains(guess[i]))
+        else if (secretCode.Contains(guess[i])) //correct letter in wrong position
         {
             correctLetterWrongPosition++;
         }
