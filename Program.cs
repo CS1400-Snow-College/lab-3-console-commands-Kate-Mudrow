@@ -1,5 +1,5 @@
 ﻿/*Name: Kate Mudrow
-Date:
+Date: 10/01/2025
 Lab: Lab 5 Mastermind*/
 
 Console.Clear();
@@ -22,7 +22,6 @@ string guess;
 
 do
 {
-    //Console.Clear();
     Console.WriteLine();
     Console.WriteLine($"Guess#: {attempts + 1}  Please guess a sequence of 4 lowercase letters with no repeats.");
     Console.Write("Enter your guess: ");
@@ -30,9 +29,9 @@ do
     guess = guess.Trim();
     attempts++;
 
-    if (guess.Length != secretCode.Length) //validate length
+    if (guess.Length < secretCode.Length || guess.Length > secretCode.Length) //validate length
     {
-        Console.WriteLine($"Your guess must be at exactly 4 letters long");
+        Console.WriteLine($"Your guess must be at exactly {secretCode.Length} letters long");
         continue;
     }
 
@@ -52,7 +51,6 @@ do
         continue;
     }
 
-
     bool duplicates = false; //check for duplicates
     for (int i = 0; i < guess.Length; i++)
     {
@@ -71,7 +69,6 @@ do
         Console.WriteLine("Your guess must contain no duplicates");
         continue;
     }
-
 
     int correctLetterAndPosition = 0;
     int correctLetterWrongPosition = 0;

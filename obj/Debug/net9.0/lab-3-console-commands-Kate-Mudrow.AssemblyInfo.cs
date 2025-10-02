@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("lab-3-console-commands-Kate-Mudrow")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+45afe43f0a79e83bccbd65fba18ae2a46a5dc119")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+84fe1578b7782ebfdd333a9a333f1dca049e291c")]
 [assembly: System.Reflection.AssemblyProductAttribute("lab-3-console-commands-Kate-Mudrow")]
 [assembly: System.Reflection.AssemblyTitleAttribute("lab-3-console-commands-Kate-Mudrow")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
